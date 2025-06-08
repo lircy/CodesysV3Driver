@@ -1,4 +1,19 @@
-1. Prerequisite for running this project: .NET Framework 4.0 must be installed.
-2.This project is developed on .NET 4.
-3.The communication implementation uses TCP/IP (as opposed to UDP), functionally similar to PLCHandler. Both access PLC data via port 11740.
-4.This project is in active development/testing phase and must not be deployed in production environments.
+## Prerequisites
+- **.NET Framework 4.0** must be installed to run this application
+
+## Technical Stack
+- Built on **.NET 4** framework
+
+## Communication Protocol
+- Implements **TCP/IP-based communication** (not UDP)  
+- Functionally equivalent to CODESYS PLCHandler  
+- Accesses PLC data through **port 11740**
+
+## Development Status
+⚠️ **Important Notice**  
+This project is currently in **active development and testing phase**.  
+**Do not deploy in production environments.**
+
+## Source Access
+_Research authorization available upon request_  
+(Includes full source code and protocol demonstration videos)
