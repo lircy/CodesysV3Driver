@@ -1,0 +1,11 @@
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\TestCodesys.exe.config
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\TestCodesys.exe
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\TestCodesys.pdb
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\CodeSysCommDriver.dll
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\CodeSysCommDriver.pdb
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\bin\Release\CodeSysCommDriver.dll.config
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\obj\Release\TestCodesys.csprojAssemblyReference.cache
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\obj\Release\TestCodesys.csproj.CoreCompileInputs.cache
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\obj\Release\TestCodesys.csproj.CopyComplete
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\obj\Release\TestCodesys.exe
+C:\Users\ShenX\Desktop\Codesys(核心源码)\Console\obj\Release\TestCodesys.pdb

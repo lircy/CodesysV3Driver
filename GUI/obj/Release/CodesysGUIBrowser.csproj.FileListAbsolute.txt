@@ -1,0 +1,14 @@
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodesysGUIBrowser.exe.config
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodesysGUIBrowser.exe
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodesysGUIBrowser.pdb
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodeSysCommDriver.dll
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodeSysCommDriver.pdb
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\bin\Release\CodeSysCommDriver.dll.config
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.csprojAssemblyReference.cache
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.Form1.resources
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.Properties.Resources.resources
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.csproj.GenerateResource.cache
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.csproj.CoreCompileInputs.cache
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.csproj.CopyComplete
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.exe
+C:\Users\ShenX\Desktop\Codesys(核心源码)\GUI\obj\Release\CodesysGUIBrowser.pdb
