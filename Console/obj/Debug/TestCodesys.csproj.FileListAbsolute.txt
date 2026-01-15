@@ -53,3 +53,12 @@ C:\Users\ShenX\Desktop\haicheng\CodesysV3Driver\Console\obj\Debug\TestCodesys.cs
 C:\Users\ShenX\Desktop\haicheng\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CopyComplete
 C:\Users\ShenX\Desktop\haicheng\CodesysV3Driver\Console\obj\Debug\TestCodesys.exe
 C:\Users\ShenX\Desktop\haicheng\CodesysV3Driver\Console\obj\Debug\TestCodesys.pdb
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\bin\Debug\TestCodesys.exe.config
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\bin\Debug\TestCodesys.exe
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\bin\Debug\TestCodesys.pdb
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\bin\Debug\CodeSysCommDriver.dll
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.csprojAssemblyReference.cache
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CoreCompileInputs.cache
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CopyComplete
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.exe
+C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.pdb
