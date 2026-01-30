@@ -61,4 +61,3 @@ C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.cspr
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CopyComplete
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.exe
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.pdb
-C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\Console\obj\Debug\TestCodesys.csprojAssemblyReference.cache
