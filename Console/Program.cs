@@ -19,10 +19,10 @@ namespace TestCodesys1
             CodeSysController controller1 = new CodeSysController();
             CodeSysController controller2 = new CodeSysController();
             controller1.UserName = "admin";
-            controller1.Password = "Ladmin?";
+            controller1.Password = "admin";
             controller2.UserName = "";
             controller2.Password = "";
-            bool res1 = controller1.Connect("10.10.19.18");
+            bool res1 = controller1.Connect("192.168.250.187");
             //bool res2 = controller2.Connect("192.168.250.187");
             if (!res1)
             {
@@ -39,15 +39,15 @@ namespace TestCodesys1
             ControllerInfo info1 =  controller1.ControllerInfo;
             //ControllerInfo info2 = controller2.ControllerInfo;
             //加载变量树根节点(必须执行，否则所有变量无法读取)
-            IntPtr rootHandle1 = controller1.LoadSymbolsFromPLC();
+            //IntPtr rootHandle1 = controller1.LoadSymbolsFromPLC();
             // IntPtr rootHandle2 = controller2.LoadSymbolsFromPLC();
-            //IntPtr rootHandle1 = controller1.LoadSymbolsFromFile("A.Device.Application.xml");
+            IntPtr rootHandle1 = controller1.LoadSymbolsFromFile("D:\\Desktop\\ClaudeWorkspace\\CodesysV3Driver\\恒泰PLC代码20240401.Device.Application.xml");
             //rootHandle2 = controller2.LoadSymbolsFromFile("D:\\personal data\\PLC\\Codesys program\\fxy20240224.Device.Application.xml");
             //加载所有叶子节点
             List<ItemAddress> items1 = controller1.LoadAllSymbolicInfo();
             //List<ItemAddress> items2 = controller2.LoadAllSymbolicInfo();
             List<ItemAddress> items_1 = new List<ItemAddress>();
-            items_1.AddRange(items1.GetRange(0, 4));
+            items_1.AddRange(items1.GetRange(0, 10));
             List<ItemAddress> items_2 = new List<ItemAddress>();
             //items_2.AddRange(items2.GetRange(0, 12));
             string formatstring = "{0,-120}{1,-30}";
@@ -83,49 +83,49 @@ namespace TestCodesys1
             //res = controller.WriteByte("Application.GVL.v1", 48);
             // bool res = controller1.Read(variableNames1.GetRange(0, 12), out List<PValue> values1);
             // "Application.GVL.TMP_BOOL", "Application.GVL.TMP_WORD", "Application.GVL.TMP_INT_ARR[0]"
-            for(int i= 0; i < 3; i++)
-            {
-                List<string> sr = new List<string>
-                            {
-                                //"Application.GVL.TMP_BOOL",
-                                //"Application.GVL.TMP_WORD",
-                                //"Application.GVL.TMP_INT",
-                                //"Application.GVL.TMP_DINT"
-                                "Application.GVL.lrVar14"
-                            };
-                bool res = false;
-                res = controller1.Read(sr, out List<PValue> values1);
-                for (int p = 0; p < values1.Count; p++)
-                {
-                    PValue v = values1[p];
-                    Console.WriteLine(v.ToString());
-                }
-                Thread.Sleep(1000);
-                res = controller1.WriteDouble("Application.GVL.lrVar14", 100.0 + i);
-                //Console.WriteLine(res.ToString());
-                //Thread.Sleep(1000);
-                //res = controller1.WriteInt("Application.GVL.TMP_DINT", 101);
-                //Console.WriteLine(res.ToString());
-                //Thread.Sleep(1000);
-                //res = controller1.Write("Application.GVL.TMP_DINT", new ValueDInt(102));
-                //Console.WriteLine(res.ToString());
-                //Thread.Sleep(1000);
-                //res = controller1.WriteShort("Application.GVL.TMP_WORD", (short)i);
-                //Console.WriteLine(res.ToString());
-                //Thread.Sleep(1000);
-                //res = controller1.WriteBool("Application.GVL.TMP_BOOL", i % 2 == 0);
-                //Console.WriteLine(res.ToString());
-                //Thread.Sleep(1000);
-                //if (controller1.ReadShort("Application.GVL.TMP_WORD", out short value))
-                //    Console.WriteLine(value.ToString());
-                //Thread.Sleep(1000);
-                //if (controller1.ReadShort("Application.GVL.TMP_INT", out short value1))
-                //    Console.WriteLine(value1.ToString());
-                Thread.Sleep(1000);
-                if (controller1.ReadDouble("Application.GVL.lrVar14", out double value2))
-                    Console.WriteLine(value2.ToString());
-                Thread.Sleep(1000);
-            }
+            //for(int i= 0; i < 3; i++)
+            //{
+            //    List<string> sr = new List<string>
+            //                {
+            //                    //"Application.GVL.TMP_BOOL",
+            //                    //"Application.GVL.TMP_WORD",
+            //                    //"Application.GVL.TMP_INT",
+            //                    //"Application.GVL.TMP_DINT"
+            //                    "Application.GVL.lrVar14"
+            //                };
+            //    bool res = false;
+            //    res = controller1.Read(sr, out List<PValue> values1);
+            //    for (int p = 0; p < values1.Count; p++)
+            //    {
+            //        PValue v = values1[p];
+            //        Console.WriteLine(v.ToString());
+            //    }
+            //    Thread.Sleep(1000);
+            //    res = controller1.WriteDouble("Application.GVL.lrVar14", 100.0 + i);
+            //    //Console.WriteLine(res.ToString());
+            //    //Thread.Sleep(1000);
+            //    //res = controller1.WriteInt("Application.GVL.TMP_DINT", 101);
+            //    //Console.WriteLine(res.ToString());
+            //    //Thread.Sleep(1000);
+            //    //res = controller1.Write("Application.GVL.TMP_DINT", new ValueDInt(102));
+            //    //Console.WriteLine(res.ToString());
+            //    //Thread.Sleep(1000);
+            //    //res = controller1.WriteShort("Application.GVL.TMP_WORD", (short)i);
+            //    //Console.WriteLine(res.ToString());
+            //    //Thread.Sleep(1000);
+            //    //res = controller1.WriteBool("Application.GVL.TMP_BOOL", i % 2 == 0);
+            //    //Console.WriteLine(res.ToString());
+            //    //Thread.Sleep(1000);
+            //    //if (controller1.ReadShort("Application.GVL.TMP_WORD", out short value))
+            //    //    Console.WriteLine(value.ToString());
+            //    //Thread.Sleep(1000);
+            //    //if (controller1.ReadShort("Application.GVL.TMP_INT", out short value1))
+            //    //    Console.WriteLine(value1.ToString());
+            //    Thread.Sleep(1000);
+            //    if (controller1.ReadDouble("Application.GVL.lrVar14", out double value2))
+            //        Console.WriteLine(value2.ToString());
+            //    Thread.Sleep(1000);
+            //}
 
             //res1 = controller1.WriteUshort("Application.PLC_PRG.nCounter", 123);
             //res1 = controller1.WriteInt("Application.PLC_PRG.nCounter1", 234);
@@ -136,24 +136,25 @@ namespace TestCodesys1
             //res = controller.WriteLong("Application.GVL.v12345678999990", 1900000);
             //res = controller.WriteUlong("Application.GVL.v123456789999990", 100001001);
             //double wrtValue = 0.01;
-            /*
+
             while (res1)
             {
                 //wrtValue += 0.022;
                 //res1 = controller1.WriteDouble("Application.GVL.var11", wrtValue);
                 System.Diagnostics.Stopwatch stopwatch1 = new System.Diagnostics.Stopwatch();
                 stopwatch1.Start();
-                res1 = controller1.Read(variableNames1.GetRange(0, 3), out List<PValue> values1);
+                res1 = controller1.Read(variableNames1, out List<PValue> values1);
                 stopwatch1.Stop();
                 long ms1 = stopwatch1.ElapsedMilliseconds;
+                Console.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}]读取耗时{ms1:F3}ms");
                 if (res1)
                 {
                     string header = $"实例1：读取{values1.Count}个变量耗时{ms1}毫秒";
-                    for (int i = 0; i < values1.Count;i++)
+                    for (int i = 0; i < values1.Count; i++)
                     {
                         PValue value = values1[i];
                         string variableName = variableNames1[i];
-                        Console.WriteLine($"[{header}]{variableName} = {value.ToString()}");
+                        //Console.WriteLine($"[{header}]{variableName} = {value.ToString()}");
                     }
                 }
                 //System.Diagnostics.Stopwatch stopwatch2 = new System.Diagnostics.Stopwatch();
@@ -171,8 +172,9 @@ namespace TestCodesys1
                 //        Console.WriteLine($"[{header}]{variableName} = {value.ToString()}");
                 //    }
                 //}
+                //System.Threading.Thread.Sleep(10);
             }
-            */
+
             Console.ReadKey();
             controller1.Disconnect();
             //controller2.Disconnect();

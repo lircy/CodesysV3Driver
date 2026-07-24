@@ -50,6 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbSymbolicDatatype = new System.Windows.Forms.TextBox();
             this.btnRead = new System.Windows.Forms.Button();
+            this.btnWrite = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.statusStrip1.SuspendLayout();
@@ -142,12 +143,13 @@
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(122, 21);
             this.tbUser.TabIndex = 8;
+            this.tbUser.Text = "admin";
             // 
             // lbStatus
             // 
             this.lbStatus.Location = new System.Drawing.Point(44, 114);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(116, 15);
+            this.lbStatus.Size = new System.Drawing.Size(276, 15);
             this.lbStatus.TabIndex = 7;
             // 
             // label6
@@ -195,6 +197,7 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(117, 21);
             this.tbPassword.TabIndex = 2;
+            this.tbPassword.Text = "admin";
             // 
             // label1
             // 
@@ -211,7 +214,7 @@
             this.tbIpAddress.Name = "tbIpAddress";
             this.tbIpAddress.Size = new System.Drawing.Size(303, 21);
             this.tbIpAddress.TabIndex = 0;
-            this.tbIpAddress.Text = "127.0.0.1";
+            this.tbIpAddress.Text = "192.168.250.187";
             // 
             // tbSymbol
             // 
@@ -238,7 +241,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbValue.Location = new System.Drawing.Point(6, 102);
             this.tbValue.Name = "tbValue";
-            this.tbValue.ReadOnly = true;
             this.tbValue.Size = new System.Drawing.Size(438, 21);
             this.tbValue.TabIndex = 10;
             // 
@@ -258,7 +260,7 @@
             this.tbSymbolicDatatype.Location = new System.Drawing.Point(6, 66);
             this.tbSymbolicDatatype.Name = "tbSymbolicDatatype";
             this.tbSymbolicDatatype.ReadOnly = true;
-            this.tbSymbolicDatatype.Size = new System.Drawing.Size(438, 21);
+            this.tbSymbolicDatatype.Size = new System.Drawing.Size(357, 21);
             this.tbSymbolicDatatype.TabIndex = 8;
             // 
             // btnRead
@@ -271,6 +273,17 @@
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // btnWrite
+            // 
+            this.btnWrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWrite.Location = new System.Drawing.Point(369, 66);
+            this.btnWrite.Name = "btnWrite";
+            this.btnWrite.Size = new System.Drawing.Size(75, 22);
+            this.btnWrite.TabIndex = 12;
+            this.btnWrite.Text = "Write";
+            this.btnWrite.UseVisualStyleBackColor = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // label4
             // 
@@ -285,6 +298,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnWrite);
             this.groupBox2.Controls.Add(this.btnRead);
             this.groupBox2.Controls.Add(this.tbValue);
             this.groupBox2.Controls.Add(this.label5);
@@ -346,6 +360,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Button btn_LoadXml;
+        private System.Windows.Forms.Button btnWrite;
         private System.Windows.Forms.Button btn_OnlineGetVars;
     }
 }

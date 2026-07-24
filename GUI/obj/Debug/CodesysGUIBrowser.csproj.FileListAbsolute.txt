@@ -84,3 +84,15 @@ C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.cs
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.csproj.CopyComplete
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.exe
 C:\Users\ShenX\Desktop\AGLink\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\bin\Debug\CodesysGUIBrowser.exe.config
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\bin\Debug\CodesysGUIBrowser.exe
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\bin\Debug\CodesysGUIBrowser.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\bin\Debug\CodeSysCommDriver.dll
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.Form1.resources
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.Properties.Resources.resources
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.csproj.GenerateResource.cache
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.csproj.CoreCompileInputs.cache
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.csproj.CopyComplete
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.exe
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\GUI\obj\Debug\CodesysGUIBrowser.csprojAssemblyReference.cache

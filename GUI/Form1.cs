@@ -14,6 +14,7 @@ namespace CodesysGUIBrowser
     public partial class Form1 : Form
     {
         private CodeSysController controller = new CodeSysController();
+        private ItemAddress _selectedItem = null;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace CodesysGUIBrowser
         {
             setStatus("disconnecting...");
             controller.Disconnect();
+            _selectedItem = null;
             treeView1.Nodes.Clear();
             lbInfo.Text = $"PLC type：";
             tbValue.Text = string.Empty;
@@ -60,6 +62,7 @@ namespace CodesysGUIBrowser
             ItemAddress item = (ItemAddress)e.Node.Tag;
             if (item != null && item.GetSymbol(out string symbol) == 0)
             {
+                _selectedItem = item;
                 tbSymbol.Text = symbol;
                 tbSymbolicDatatype.Text = item.Datatype.ToString();
             }
@@ -98,7 +101,67 @@ namespace CodesysGUIBrowser
             if (!string.IsNullOrEmpty(symbol))
             {
                 if (controller.Read(new List<string>() { symbol }, out List<PValue> values) && values.Count > 0)
-                    tbValue.Text = values[0].ToString();
+                    tbValue.Text = values[0].GetValueAsString();
+            }
+        }
+
+        private void btnWrite_Click(object sender, EventArgs e)
+        {
+            if (!controller.IsConnected)
+            {
+                MessageBox.Show("PLC not connected");
+                return;
+            }
+            if (_selectedItem == null)
+            {
+                MessageBox.Show("No variable selected. Please select a variable from the tree.");
+                return;
+            }
+
+            string symbol = tbSymbol.Text;
+            if (string.IsNullOrEmpty(symbol))
+            {
+                MessageBox.Show("No symbol available for the selected variable.");
+                return;
+            }
+
+            string rawValue = tbValue.Text;
+            if (string.IsNullOrWhiteSpace(rawValue))
+            {
+                MessageBox.Show("Please enter a value in the Value field.");
+                return;
+            }
+
+            // Parse the user's input into the appropriate PValue based on the variable's type
+            PValue pValue = PValue.FromString(rawValue, _selectedItem.Datatype);
+            if (pValue == null)
+            {
+                MessageBox.Show($"Cannot parse '{rawValue}' as type {_selectedItem.Datatype}.\n" +
+                    "Please enter a valid value for this type.");
+                return;
+            }
+
+            setStatus("writing...");
+            try
+            {
+                bool success = controller.Write(symbol, pValue);
+                if (success)
+                {
+                    setStatus("write successful");
+                    // Auto-refresh: re-read to confirm the new value
+                    btnRead_Click(sender, e);
+                    setStatus("write successful, value confirmed");
+                }
+                else
+                {
+                    setStatus("write failed");
+                    MessageBox.Show("Write operation failed. The PLC may have rejected the value.");
+                }
+            }
+            catch (Exception ex)
+            {
+                setStatus("write error");
+                MessageBox.Show($"Write error: {ex.Message}");
             }
         }
 
