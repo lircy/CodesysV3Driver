@@ -69,3 +69,12 @@ D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\Console\obj\Debug\TestCodesys
 D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CopyComplete
 D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\Console\obj\Debug\TestCodesys.exe
 D:\Desktop\EZ-EDS V3.23.1.20171205\CodesysV3Driver\Console\obj\Debug\TestCodesys.pdb
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\bin\Debug\TestCodesys.exe.config
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\bin\Debug\TestCodesys.exe
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\bin\Debug\TestCodesys.pdb
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\bin\Debug\CodeSysCommDriver.dll
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CoreCompileInputs.cache
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\obj\Debug\TestCodesys.csproj.CopyComplete
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\obj\Debug\TestCodesys.exe
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\obj\Debug\TestCodesys.pdb
+D:\Desktop\demo\Secure\CodesysV3Driver\Console\obj\Debug\TestCodesys.csprojAssemblyReference.cache

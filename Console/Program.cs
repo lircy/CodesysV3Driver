@@ -39,9 +39,9 @@ namespace TestCodesys1
             ControllerInfo info1 =  controller1.ControllerInfo;
             //ControllerInfo info2 = controller2.ControllerInfo;
             //加载变量树根节点(必须执行，否则所有变量无法读取)
-            //IntPtr rootHandle1 = controller1.LoadSymbolsFromPLC();
+            IntPtr rootHandle1 = controller1.LoadSymbolsFromPLC();
             // IntPtr rootHandle2 = controller2.LoadSymbolsFromPLC();
-            IntPtr rootHandle1 = controller1.LoadSymbolsFromFile("D:\\Desktop\\ClaudeWorkspace\\CodesysV3Driver\\恒泰PLC代码20240401.Device.Application.xml");
+            //IntPtr rootHandle1 = controller1.LoadSymbolsFromFile("D:\\Desktop\\ClaudeWorkspace\\CodesysV3Driver\\20240401.Device.Application.xml");
             //rootHandle2 = controller2.LoadSymbolsFromFile("D:\\personal data\\PLC\\Codesys program\\fxy20240224.Device.Application.xml");
             //加载所有叶子节点
             List<ItemAddress> items1 = controller1.LoadAllSymbolicInfo();
