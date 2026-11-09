@@ -1,0 +1,10 @@
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\TestCodesysV3Driver.Console.exe.config
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\TestCodesysV3Driver.Console.exe
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\TestCodesysV3Driver.Console.pdb
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\CodesysV3Driver.dll
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\CodesysV3Driver.pdb
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Release\CodesysV3Driver.dll.config
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Release\TestCodesysV3Driver.Console.csproj.CoreCompileInputs.cache
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Release\TestCodesysV3Driver.Console.csproj.CopyComplete
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Release\TestCodesysV3Driver.Console.exe
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Release\TestCodesysV3Driver.Console.pdb

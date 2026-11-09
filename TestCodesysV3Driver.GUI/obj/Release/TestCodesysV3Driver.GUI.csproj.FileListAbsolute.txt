@@ -1,0 +1,15 @@
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\TestCodesysV3Driver.GUI.exe.config
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\TestCodesysV3Driver.GUI.exe
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\TestCodesysV3Driver.GUI.pdb
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\CodesysV3Driver.dll
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\Net4x.Extensions.Logging.Abstractions.dll
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\CodesysV3Driver.pdb
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Release\CodesysV3Driver.dll.config
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.csprojAssemblyReference.cache
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.Form1.resources
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.Properties.Resources.resources
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.csproj.GenerateResource.cache
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.csproj.CoreCompileInputs.cache
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.csproj.CopyComplete
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.exe
+D:\KimiWorkspace\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Release\TestCodesysV3Driver.GUI.pdb

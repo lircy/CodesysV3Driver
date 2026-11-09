@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.35714.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCodesysV3Driver.GUI", "TestCodesysV3Driver.GUI\TestCodesysV3Driver.GUI.csproj", "{41037E7C-8E4C-4211-97C6-EFDAF73304EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCodesysV3Driver.Console", "TestCodesysV3Driver.Console\TestCodesysV3Driver.Console.csproj", "{F881165F-60F4-464A-A172-DD2167D5FBB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41037E7C-8E4C-4211-97C6-EFDAF73304EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41037E7C-8E4C-4211-97C6-EFDAF73304EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41037E7C-8E4C-4211-97C6-EFDAF73304EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41037E7C-8E4C-4211-97C6-EFDAF73304EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F881165F-60F4-464A-A172-DD2167D5FBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F881165F-60F4-464A-A172-DD2167D5FBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F881165F-60F4-464A-A172-DD2167D5FBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F881165F-60F4-464A-A172-DD2167D5FBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE8160E2-D0CD-45D7-8099-8B682849F53C}
+	EndGlobalSection
+EndGlobal
