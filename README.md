@@ -60,13 +60,12 @@ driver.Disconnect();                       // idempotent; Dispose() is equivalen
 
 ## API Reference
 
-### CodeSysController
+### CodeSysController — Methods
 
 | Member | Description |
 |---|---|
 | `bool Connect(string host, int port, TransportLayer transport, string user, string password)` | Connect over TCP (`TransportLayer.Tcp`, port 11740) or UDP (`TransportLayer.Udp`, port 1740); `true` on success |
 | `void Disconnect()` | Disconnect and release the link (idempotent; `Dispose()` is equivalent) |
-| `bool IsConnected` | Connection state |
 | `bool LoadSymbolsFromPLC()` | Load the symbol tree online from the PLC |
 | `bool LoadSymbolsFromFile(string path)` | Load the symbol tree from a CODESYS symbol-export XML |
 | `List<SymbolNode> Browse(string symbolPath)` | Expand one level of the tree (`null` = top level; lazy loading) |
@@ -74,9 +73,21 @@ driver.Disconnect();                       // idempotent; Dispose() is equivalen
 | `bool Read(List<string> names, out List<PValue> values)` | Batch read |
 | `bool Write(string name, PValue value)` | Single write (`PValue.Create(VarType.X, val)`) |
 | `bool Write(List<string> names, List<PValue> values)` | Batch write |
+| `bool WriteByText(string name, string text)` | Write by text, auto-parsed to the symbol type |
+
+### CodeSysController — Properties
+
+| Member | Description |
+|---|---|
+| `bool IsConnected` | Connection state |
+| `DeviceInfo DeviceInformation` | Device info (available after Connect) |
 | `int LastErrorCode` / `string LastErrorText` | Per-instance result of the last operation |
 | `ILogger Logger` | Optional logging injection (NullLogger when unset) |
-| Reconnect options / events | Auto-reconnect config (`Reconnect.Enabled`) and `ConnectionLost` / `Reconnecting` / `Reconnected` notifications |
+| `LogLevel MinimumLogLevel` | Minimum log level forwarded to `Logger` |
+| `bool IsEnableSystemLog` | Enable system-level logging |
+| `ReconnectOptions Reconnect` | Auto-reconnect config: `Enabled` / `MaxRetries` / `InitialDelayMs` / `MaxDelayMs` / `Multiplier` |
+| `int ReconnectAttempts` | Reconnect attempt counter |
+| Events `ConnectionLost` / `Reconnecting` / `Reconnected` | Reconnect notifications (background thread; UI must marshal) |
 
 ### SymbolNode (tree node / symbol)
 
