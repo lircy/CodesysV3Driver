@@ -1,48 +1,83 @@
-## Prerequisites
-- **.NET Framework 4.0** must be installed to run this application
+# CodesysV3Driver
 
-## Technical Stack
-- Built on **.NET 4** framework
+A .NET Framework communication driver for CODESYS V3-based PLCs over TCP/UDP, shipped as a prebuilt library with a console demo and a WinForms demo.
 
-## Communication Protocol
-- Implements **TCP and UDP** transport layers
-- Functionally equivalent to CODESYS PLCHandler
-- Default ports: **TCP 11740** / **UDP 1740**
-- Transport layer selection:
-  - **UDP**: 4-6x faster per operation (measured on AC802 real hardware), but no delivery guarantee
-  - **TCP**: Reliable delivery with automatic retransmission, slower due to per-PDU round-trip overhead
-  - UDP failure does NOT fall back to TCP (caller must explicitly choose)
+- Target framework: .NET Framework 4.0 (buildable with VS2017+)
+- Namespace: `CodesysV3Driver`
+- Default ports: TCP 11740 / UDP 1740
 
-## Authentication
-- Supports both **encrypted two-step login** (RSA-OAEP with SHA-256) and **legacy single-step login**
-- Login mode is automatically detected per device:
-  - Newer firmware (e.g. 3.5.16+) requires encrypted two-step login
-  - Older firmware (e.g. 3.5.11) accepts legacy single-step login
-- Credentials are passed as `Connect()` parameters (username, password), not stored as public properties
-- Challenge value (0x23 tag) is randomized per connection, aligned with official PLCHandler behavior
+## Package Layout
 
-## Automatic Reconnection
-- Built-in auto-reconnect with exponential backoff (default: disabled, set `Reconnect.Enabled = true`)
-- Events: `ConnectionLost` → `Reconnecting` (with attempt count) → `Reconnected`
-- Reconnection restores the session without requiring symbol table reload
-- Works with both TCP and UDP transport layers
-- UDP transport: detects connection loss via watchdog timer (silence timeout)
-- TCP transport: detects connection loss via socket read failure
+```
+CodesysV3Driver.sln                       Solution file
+├─ Lib\                                   Prebuilt assemblies
+│  ├─ CodesysV3Driver.dll                 Driver library (namespace: CodesysV3Driver)
+│  └─ Net4x.Extensions.Logging.Abstractions.dll   ILogger abstraction dependency
+├─ TestCodesysV3Driver.Console\           Console demo
+└─ TestCodesysV3Driver.GUI\               WinForms demo
+```
 
-## Usage
+## Key Features
 
-### Console Demo
+- **Transport choice**: TCP (reliable delivery) or UDP (lower latency, no delivery guarantee). The caller selects explicitly; UDP failure does not fall back to TCP.
+- **Device-adaptive login**: the login form is auto-detected per device (newer firmware two-step, older firmware single-step). Credentials are passed as `Connect()` parameters.
+- **Symbol tree**: online browsing from the PLC, or offline loading of a CODESYS symbol-export XML; lazy expansion keeps initial load fast.
+- **Batched read/write**: variables addressed by full symbolic path; typed values via `PValue`.
+- **Auto-reconnect**: built-in, disabled by default (`Reconnect.Enabled = true`); raises `ConnectionLost` / `Reconnecting` / `Reconnected`. Works with both transports.
+- **Per-instance error ledger**: read/write return `false` with `LastErrorCode` / `LastErrorText` instead of throwing.
+- **Logging via ILogger injection**: assign the public `Logger` property; when unset, logging is silently discarded (NullLogger).
+- **IDisposable**: `Dispose()` aliases `Disconnect()` — releases the link, keeps the symbol tree, and the instance can be reconnected.
+
+## Quick Start
+
+```csharp
+using CodesysV3Driver;
+
+var driver = new CodeSysController();
+// driver.Logger = new MyLogger();        // optional: inject Microsoft.Extensions.Logging.ILogger
+
+// TCP (default port 11740). For UDP: Connect(host, 1740, TransportLayer.Udp, user, password)
+bool ok = driver.Connect("192.168.0.1", 11740, TransportLayer.Tcp, "user", "password");
+
+// Offline symbol-export XML, or online from the PLC
+ok = driver.LoadSymbolsFromFile("symbols.xml");   // or: driver.LoadSymbolsFromPLC()
+
+// Browse the tree: null = top level; pass a node's SymbolPath to expand it
+List<SymbolNode> groups = driver.Browse(null);
+List<SymbolNode> leaves = driver.LoadAllSymbolicInfo();   // all leaf symbols
+
+// Batch read
+var names = new List<string> { "Application.GVL_Example.Start", "Application.GVL_Example.Speed" };
+List<PValue> values;
+ok = driver.Read(names, out values);       // values[i].ToString() shows the value
+
+// Write
+ok = driver.Write("Application.GVL_Example.Start", PValue.Create(VarType.BOOL, true));
+ok = driver.Write("Application.GVL_Example.Speed", PValue.Create(VarType.REAL, 12.5));
+
+driver.Disconnect();                       // idempotent; Dispose() is equivalent
+```
+
+## Building
+
+Open `CodesysV3Driver.sln` in Visual Studio 2017+ and build; or from the command line:
+
+```
+MSBuild CodesysV3Driver.sln /p:Configuration=Debug
+```
+
+Both demo projects reference the prebuilt assemblies in `Lib\`.
+
+## Test Demos
+
+**Console** (`TestCodesysV3Driver.Console.exe`):
+
 ```
 TestCodesysV3Driver.Console.exe <host> [port=11740] [user] [password] [symbolFile]
 ```
-Connects to the PLC, loads the symbol table (offline CODESYS symbol-export XML when
-`symbolFile` is given, otherwise online from the PLC), prints the top-level symbol
-groups, sample-reads up to 8 readable leaf variables, then disconnects.
-Read-only demo — write examples are shown as comments at the end of `Program.cs`.
-Transport defaults to TCP; for UDP see the `Connect` comment in `Program.cs`.
-Login form (encrypted two-step / legacy single-step) is auto-detected per device.
 
-### Examples
+Connects to the PLC, loads the symbol table (offline CODESYS symbol-export XML when `symbolFile` is given, otherwise online from the PLC), prints the top-level symbol groups, sample-reads up to 8 readable leaf variables, then disconnects. Read-only demo — write examples are shown as comments at the end of `Program.cs`. Transport defaults to TCP; for UDP see the `Connect` comment in `Program.cs`.
+
 ```
 # Connect via TCP (default port 11740)
 TestCodesysV3Driver.Console.exe 192.168.0.1
@@ -51,11 +86,14 @@ TestCodesysV3Driver.Console.exe 192.168.0.1
 TestCodesysV3Driver.Console.exe 192.168.0.1 11740 admin password symbols.xml
 ```
 
+**GUI** (`TestCodesysV3Driver.GUI.exe`): enter host/port/credentials in the connection area -> load a symbol-export XML or fetch the online tree -> pick variables in the tree (lazy expansion) -> single-point read/write. Driver logs are written to the log area through the injected ILogger.
+
 ## Development Status
-⚠️ **Important Notice**  
-This project is currently in **active development and testing phase**.  
+
+⚠️ **Important Notice**
+This project is currently in **active development and testing phase**.
 **Do not deploy in production environments.**
 
 ## Source Access
-_Research authorization available upon request_  
-(Includes full source code and protocol demonstration videos)
+
+_Research authorization available upon request._
