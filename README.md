@@ -58,6 +58,35 @@ ok = driver.Write("Application.GVL_Example.Speed", PValue.Create(VarType.REAL, 1
 driver.Disconnect();                       // idempotent; Dispose() is equivalent
 ```
 
+## API Reference
+
+### CodeSysController
+
+| Member | Description |
+|---|---|
+| `bool Connect(string host, int port, TransportLayer transport, string user, string password)` | Connect over TCP (`TransportLayer.Tcp`, port 11740) or UDP (`TransportLayer.Udp`, port 1740); `true` on success |
+| `void Disconnect()` | Disconnect and release the link (idempotent; `Dispose()` is equivalent) |
+| `bool IsConnected` | Connection state |
+| `bool LoadSymbolsFromPLC()` | Load the symbol tree online from the PLC |
+| `bool LoadSymbolsFromFile(string path)` | Load the symbol tree from a CODESYS symbol-export XML |
+| `List<SymbolNode> Browse(string symbolPath)` | Expand one level of the tree (`null` = top level; lazy loading) |
+| `List<SymbolNode> LoadAllSymbolicInfo()` | Fully expand and return all symbols |
+| `bool Read(List<string> names, out List<PValue> values)` | Batch read |
+| `bool Write(string name, PValue value)` | Single write (`PValue.Create(VarType.X, val)`) |
+| `bool Write(List<string> names, List<PValue> values)` | Batch write |
+| `int LastErrorCode` / `string LastErrorText` | Per-instance result of the last operation |
+| `ILogger Logger` | Optional logging injection (NullLogger when unset) |
+| Reconnect options / events | Auto-reconnect config (`Reconnect.Enabled`) and `ConnectionLost` / `Reconnecting` / `Reconnected` notifications |
+
+### SymbolNode (tree node / symbol)
+
+| Member | Description |
+|---|---|
+| `string Name` / `string SymbolPath` | Node name / full symbol path |
+| `VarType Datatype` | Data type |
+| `bool IsContainer` | `true` for groups / structs / arrays that can be expanded further |
+| `AccessRight Access` | Access right (read / write / none) |
+
 ## Building
 
 Open `CodesysV3Driver.sln` in Visual Studio 2017+ and build; or from the command line:
