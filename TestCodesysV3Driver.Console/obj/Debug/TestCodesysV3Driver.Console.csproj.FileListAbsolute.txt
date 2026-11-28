@@ -1,0 +1,9 @@
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Debug\TestCodesysV3Driver.Console.exe
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Debug\TestCodesysV3Driver.Console.pdb
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Debug\CodesysV3Driver.dll
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\bin\Debug\Net4x.Extensions.Logging.Abstractions.dll
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Debug\TestCodesysV3Driver.Console.csproj.CoreCompileInputs.cache
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Debug\TestCodesysV3Driver.Console.csproj.CopyComplete
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Debug\TestCodesysV3Driver.Console.exe
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Debug\TestCodesysV3Driver.Console.pdb
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.Console\obj\Debug\TestCodesysV3Driver.Console.csprojAssemblyReference.cache

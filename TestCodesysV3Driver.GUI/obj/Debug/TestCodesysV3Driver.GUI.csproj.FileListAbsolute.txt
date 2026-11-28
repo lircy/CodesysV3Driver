@@ -1,0 +1,10 @@
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Debug\TestCodesysV3Driver.GUI.exe
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Debug\TestCodesysV3Driver.GUI.pdb
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Debug\CodesysV3Driver.dll
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\bin\Debug\Net4x.Extensions.Logging.Abstractions.dll
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.Form1.resources
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.csproj.GenerateResource.cache
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.csproj.CoreCompileInputs.cache
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.csproj.CopyComplete
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.exe
+D:\KimiWorkspace\Omron\SoftwareRelease\CodesysV3Driver\TestCodesysV3Driver.GUI\obj\Debug\TestCodesysV3Driver.GUI.pdb
